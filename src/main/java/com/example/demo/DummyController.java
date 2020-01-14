@@ -28,7 +28,6 @@ public class DummyController {
     @PostMapping(value = "/matches")
     public Match createMatch(@RequestBody CreateMatchJson createMatchJson) {
         Match match = new Match();
-        match.setId(createMatchJson.getId());
         match.setName(createMatchJson.getName());
         return matchRepository.save(match);
     }
